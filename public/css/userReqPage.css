@@ -1,0 +1,15 @@
+body {
+    background-image: url('../images/body-bg.png');
+}
+.vol {
+    flex-wrap: wrap;
+}
+.vol span {
+    width: 20%;
+}
+.vol .desc {
+    color: var(--clr-accent-600);
+    margin-block: 1rem;
+    padding-inline: 2rem;
+    width: 100%;
+}

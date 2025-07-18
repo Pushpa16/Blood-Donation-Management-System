@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Information</title>
+    <link rel="stylesheet" href="/css/prerequisite.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/userdash.css">
+    <link rel="stylesheet" href="/css/changePasswd.css">
+    <link rel="stylesheet" href="/css/editInfo.css">
+</head>
+<body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo-container">
+          <div class="logo"></div>
+          <a href="/">
+          <h1>Blood Care</h1>
+          </a>
+        </div>
+        <ul class="primary-nav-items" style="display: none;">
+          <li><a href="/userlogin"><button>Log In</button></a></li>
+          <li><a href="/usersignup"><button data-type="inverted" >Register</button></a></li>
+        </ul>
+        <div class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+          <svg class="icon">
+            <use xlink:href="icons/hamburger.svg#hamburger"></use>
+          </svg>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+        <div class="crumbs">
+            {{!-- <a href="/dashboard/{{email}}">Dashboard</a><span>/Edit Password</span> --}}
+            <form action="/api/userLogin" method="post">
+              <input class="hidden" name="email" type="email" value="{{email}}">
+              <input class="hidden" name="password" type="password" value="{{password}}">
+              <input class="hidden" name="update" type="number" value="2">
+              <button type="submit">DashBoard</button><span>/Edit Password</span>
+            </form>
+        </div>
+        <div class="card-container">
+            <div></div>
+            <div class="details">
+        <form class="form-container card" action="/api/userLogin" method="post">
+            <div class="info even-columns">
+                <label for="email">Email*</label>
+                <input name="email" value="{{email}}" readonly="read-only"></input>
+            </div>
+            <div class="info even-columns hidden">
+                <label for="password">Password</label>
+                <input name="password" value="{{password}}" type="password" readonly="read-only"></input>
+            </div>
+            <div class="hidden" class="info even-columns">
+                <label for="update"></label>
+                <input name="update" value="1" readonly="read-only"></input>
+            </div>
+            <div class="info even-columns">
+                <label for="age">Age</label>
+                <input name="age" type="number" min="18" max="65"></input>
+            </div>
+            <div class="info even-columns">
+                <label for="gender">Gender</label>
+                {{!-- <input name="gender" ></input> --}}
+                <select name="gender" id="gender" required>
+                    <option value=""></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="info even-columns">
+                <label for="location">Location</label>
+                <input name="location"></input>
+            </div>
+            <button type="submit">Change</button>
+        </form>
+        </div>
+        </div>
+    </main>
+</body>
+</html>

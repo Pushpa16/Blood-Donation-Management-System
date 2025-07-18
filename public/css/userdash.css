@@ -1,0 +1,97 @@
+body {
+    height: 100vh;
+    background-image: url('../images/donate-blood-and-save-life.jpg'), url('../images/body-bg.png');
+    background-repeat: no-repeat, repeat;
+    background-position: 100% 60%, 100%;
+    /* background-size: 20%; */
+}    
+main {
+    margin-top: 6rem;
+}
+.user-container {
+    --max-width: 1600px;
+    --container-padding: 1rem;
+    
+    width: min(var(--max-width), 100% - (var(--container-padding)*2));
+    margin-inline: auto;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+.primary-nav-items {
+    gap: 1rem
+}
+
+.details {
+    width: 768px;
+    margin-top: 3rem;
+}
+
+.details .card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.details h4 {
+    font-size: 28px;
+    font-weight: 600;
+}
+.card {
+    width: 100%;
+    padding: 5rem 10rem 5rem 4rem;
+    background-image: linear-gradient(to bottom right, var(--clr-accent-400), pink);
+    box-shadow: 0 0 40px var(--clr-accent-400);
+    border: 1px var(--clr-accent-600);
+    border-radius: 15px;
+}
+.card .info{
+    width: 100%;
+    margin-block: 0.5rem;
+}
+.info label {
+    font-size: 24px;
+}
+.info input,
+.info select {
+    /* cursor: none; */
+    text-align: center;
+    padding-inline: 1rem;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+.card a{
+    margin-top: 2rem;
+    font-size: 20px;
+    color: aliceblue;
+}
+.card .unregister {
+    display: block;
+    margin-left: auto;
+}
+.confirmation {
+    display: none;
+}
+.confirmation span{
+    font-size: 20px;
+}
+.confirmation button {
+    font-size: 16px;
+}
+.card-header button {
+    font-size: 19px;
+    font-weight: 400;
+    color: blue;
+}
+.hidden {
+    display: none;
+}
+.changepasswd {
+    background-color: transparent;
+    padding-left: 0;
+    font-family: none;
+    font-weight: 400;
+    color: var(--clr-accent-100);
+}
